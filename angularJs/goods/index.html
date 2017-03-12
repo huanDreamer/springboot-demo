@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!--angular-->
+    <script src="js/angular/angular.js"></script>
+    <script src="js/angular/angular-route.js"></script>
+    <script src="js/angular/angular-ui-router.js"></script>
+    <script src="js/angular/angular-resource.js"></script>
+    <script src="js/angular/ngStorage.min.js"></script>
+
+    <script src="js/angular/angular-animate.js"></script>
+    <script src="js/angular/angular-sanitize.js"></script>
+    <script src="js/angular/ui-bootstrap-tpls-2.1.4.js"></script>
+
+    <link rel="stylesheet" href="css/ui-bootstrap-2.1.4-csp.css"/>
+
+    <!--bootstrap-->
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <link rel="stylesheet" href="css/index.css"/>
+    <script src="js/index.js" charset="UTF-8"></script>
+
+
+    <title>商品管理</title>
+</head>
+
+<body ng-app="myApp">
+
+
+<div class="container">
+
+    <ul class="menu">
+        <a href="#/list">
+            <li>商品列表</li>
+        </a>
+        <a href="#/add">
+            <li>添加商品</li>
+        </a>
+    </ul>
+
+    <!--显示提示信息-->
+    <div class="tooltips">
+        <div uib-alert ng-repeat="alert in alerts" ng-class="'alert-' + (alert.type || 'info')"
+             close="closeAlert($index)">
+            {{alert.msg}}
+        </div>
+    </div>
+
+
+    <div ng-view class="container"></div>
+
+</div>
+
+
+</body>
+
+</html>

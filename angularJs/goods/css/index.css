@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+.menu {
+    margin-left: 5%;
+}
+
+.menu li {
+    list-style: none;
+    display: inline-block;
+    margin-top: 40px;
+    padding: 10px 20px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+.menu li:hover {
+    cursor: pointer;
+    background-color: #dddddd;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+.menu .btn {
+    padding: 6px 12px;
+    width: 40px;
+    height: 30px;
+}
+
+.tooltips {
+    width: 400px;
+    position: fixed;
+    right: 20px;
+    top: 30px;
+    opacity: .9;
+    z-index: 1000;
+}

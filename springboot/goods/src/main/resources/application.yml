@@ -1,0 +1,13 @@
+# database connections
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.2.200:3306/goods?autoReconnect=true&zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 
+    driverClassName: com.mysql.jdbc.Driver
+    maxActive: 2
+    maxIdle: 0
+    validationQuery: select 1
+    testWhileIdle: true
+    testOnBorrow: true
+    timeBetweenEvictionRunsMillis: 60000
